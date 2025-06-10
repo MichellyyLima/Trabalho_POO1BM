@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class MovimentoPlayer : MonoBehaviour
 {
+    private Rigidbody rb;
+    public float velocidade = 10;
     
     void Start()
     {
