@@ -1,8 +1,8 @@
-using Unity.VisualScripting;
-using UnityEditor;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Heroi : MonoBehaviour
 {
     private string Nome;
     private int velocidade;
@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private int ataque;
     public int defesa;
 
-    public Player(string nome, int Vida, int velocidade, int ataque, int defesa)
+    public Heroi(string nome, int Vida, int velocidade, int ataque, int defesa)
     {
         this.Nome = Nome;
         this.Vida = Vida;
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
         this.ataque = ataque;
         this.defesa = defesa;
     }
-    
+
     public string GetNome()
     {
         return this.Nome;
@@ -69,33 +69,6 @@ public class Player : MonoBehaviour
         this.defesa = defesa;
     }
 
-
-    public string CompararAtaque(Player heroi)
-    {
-        if (this.ataque > heroi.GetAtaque())
-        {
-            return Nome + " é mais forte que " + heroi.GetNome();
-        }
-        else if (this.ataque < heroi.GetAtaque())
-        {
-            return heroi.GetNome() + " é mais forte que " + Nome;
-        }
-        else
-        {
-            return Nome + " e " + heroi.GetNome() + " têm a mesma força";
-        }
-    }
-    
-         
-    
-    void Start()
-    {
-        
-    }
-
-   
-    void Update()
-    {
-        
-    }
 }
+
+
