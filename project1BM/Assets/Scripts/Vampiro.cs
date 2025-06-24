@@ -10,7 +10,7 @@ public class Vampiro : Player
     private string habilidade = "Mordida Sanguinária";
 
     public Vampiro(string nome, int vida, int velocidade, int ataque, int defesa) 
-        : base(nome, vida, velocidade, ataque, defesa)
+        : base(nome, vida, ataque, defesa)
     {
     }
 
@@ -18,9 +18,8 @@ public class Vampiro : Player
     {
         return habilidade;
     }
-
-    // Habilidade especial: suga vida
-    public void UsarHabilidade(Player alvo)
+    
+    public void UsarHabilidade(alvo)
     {
         int dano = GetAtaque() - alvo.GetDefesa();
         if (dano < 0) dano = 0;
@@ -40,15 +39,6 @@ public class Vampiro : Player
         }
     }
 }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

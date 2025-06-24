@@ -5,7 +5,6 @@ using UnityEngine;
 public class Heroi : MonoBehaviour
 {
     private string Nome;
-    private int velocidade;
     public int Vida;
     private int ataque;
     public int defesa;
@@ -14,7 +13,6 @@ public class Heroi : MonoBehaviour
     {
         this.Nome = Nome;
         this.Vida = Vida;
-        this.velocidade = velocidade;
         this.ataque = ataque;
         this.defesa = defesa;
     }
@@ -38,17 +36,7 @@ public class Heroi : MonoBehaviour
     {
         this.Vida = vida;
     }
-
-    public int GetVelocidade()
-    {
-        return this.velocidade;
-    }
-
-    public void SetVelocidade(int vel)
-    {
-        this.velocidade = velocidade;
-    }
-
+    
     public int GetAtaque()
     {
         return this.ataque;

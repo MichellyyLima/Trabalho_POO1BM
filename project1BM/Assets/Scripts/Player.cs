@@ -5,16 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private string Nome;
-    private int velocidade;
     public int Vida;
     private int ataque;
     public int defesa;
 
-    public Player(string nome, int Vida, int velocidade, int ataque, int defesa)
+    public Player(string nome, int Vida, int ataque, int defesa)
     {
         this.Nome = Nome;
         this.Vida = Vida;
-        this.velocidade = velocidade;
         this.ataque = ataque;
         this.defesa = defesa;
     }
@@ -38,17 +36,6 @@ public class Player : MonoBehaviour
     {
         this.Vida = vida;
     }
-
-    public int GetVelocidade()
-    {
-        return this.velocidade;
-    }
-
-    public void SetVelocidade(int vel)
-    {
-        this.velocidade = velocidade;
-    }
-
     public int GetAtaque()
     {
         return this.ataque;
@@ -70,19 +57,19 @@ public class Player : MonoBehaviour
     }
 
 
-    public string CompararAtaque(Player heroi)
+    public string CompararAtaque(Player Inimigo)
     {
-        if (this.ataque > heroi.GetAtaque())
+        if (this.ataque > Inimigo.GetAtaque())
         {
-            return Nome + " é mais forte que " + heroi.GetNome();
+            return Nome + " é mais forte que " + Inimigo.GetNome();
         }
-        else if (this.ataque < heroi.GetAtaque())
+        else if (this.ataque < Inimigo.GetAtaque())
         {
-            return heroi.GetNome() + " é mais forte que " + Nome;
+            return Inimigo.GetNome() + " é mais forte que " + Nome;
         }
         else
         {
-            return Nome + " e " + heroi.GetNome() + " têm a mesma força";
+            return Nome + " e " + Inimigo.GetNome() + " têm a mesma força";
         }
     }
     
