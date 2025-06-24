@@ -8,14 +8,6 @@ public class Player : MonoBehaviour
     public int Vida;
     private int ataque;
     public int defesa;
-
-    public Player(string nome, int Vida, int ataque, int defesa)
-    {
-        this.Nome = Nome;
-        this.Vida = Vida;
-        this.ataque = ataque;
-        this.defesa = defesa;
-    }
     
     public string GetNome()
     {

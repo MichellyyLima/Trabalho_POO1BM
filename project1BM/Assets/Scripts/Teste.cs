@@ -6,34 +6,33 @@ using UnityEngine;
 
 public class Teste : MonoBehaviour
 {
-    Vampiro Dexter = new Vampiro();
-    Inimigo = new Inimigo();
+    Vampiro Dexter = new Vampiro(); 
+    Inimigo inimigo = new Inimigo();
 
     void Start()
     {
-        Dexter.GetNome("Dexter");
-        Dexter.GetAtaque();
-        Dexter.GetVida();
-        Dexter.GetDefesa();
-        Dex.UsarHabilidade("");
+        Dexter.SetNome("Dexter");
+        Dexter.SetAtaque(85);
+        Dexter.SetVida(20);
+        Dexter.SetDefesa();
+        Dexter.SetHabilidade("mordida sanguinária");
         
         
-        Dex.AtribuirNome("Dex");
-        Dex.AtribuirForca_Ataque(13);
-        Dex.AtribuirForca_do_pulo(8);
-        Dex.AtribuirEnergia(10);
-        Dex.AtribuirVelocidade(11);
+        inimigo.SetNome("Iui");
+        inimigo.SetAtaqueInimigo(13);
+        inimigo.GetEnergia(10);
+        inimigo.GetVelocidade(11);
         
-        Dex.UsarContratoDeSangue(Raul);
-
-        // Verifica energia de Raul após o ataque
-        if (Raul.Energia() <= 0)
+        Dexter.UsouMordidaSanguinaria(inimigo);
+        Dexter.UsouMordidasanguinaria(inimigo);
+        
+        if (Inimigo.GetVida() <= 0)
         {
-            Debug.Log("O " + Raul.Nome() + " ficou sem energia");
+            Debug.Log("O " + inimigo.nome() + "Morreu");
         }
         else
         {
-            Debug.Log("O " + Raul.Nome() + " ainda tem " + Raul.Energia() + " de energia");
+            Debug.Log("O " + inimigo.GetNome() + " ainda tem " + inimigo.GetVida() + " de vida");
         }
     }
 
