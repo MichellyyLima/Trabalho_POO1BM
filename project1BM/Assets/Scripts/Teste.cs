@@ -10,16 +10,17 @@ public class Teste : MonoBehaviour
     Inimigo inimigo = new Inimigo();
 
     void Start()
+    
     {
-        Dexter.SetNome("Dexter");
-        Dexter.SetAtaque(85);
-        Dexter.SetVida(20);
-        Dexter.SetDefesa();
-        Dexter.SetHabilidade("mordida sanguinária");
+        Dexter.GetNome();
+        Dexter.GetAtaque(20);
+        Dexter.GetVida(20);
+        Dexter.GetDefesa(20);
+        Dexter.GetMordidaSanguinaria();
         
         
-        inimigo.SetNome("Iui");
-        inimigo.SetAtaqueInimigo(13);
+        inimigo.GetNome();
+        inimigo.GetAtaqueInimigo(13);
         inimigo.GetEnergia(10);
         inimigo.GetVelocidade(11);
         
@@ -32,27 +33,10 @@ public class Teste : MonoBehaviour
         }
         else
         {
-            Debug.Log("O " + inimigo.GetNome() + " ainda tem " + inimigo.GetVida() + " de vida");
+            Debug.Log("O " + inimigo.Nome() + " ainda tem " + inimigo.GetVida() + " de vida");
         }
-    }
-
-    void Update()
-    {
-        // Atualizações por frame (caso precise no futuro)
-    }
+    
 }
-
-    void Update()
-    {
-        
-    }
-}
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

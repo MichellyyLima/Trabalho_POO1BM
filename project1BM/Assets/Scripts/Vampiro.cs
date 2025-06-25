@@ -7,12 +7,12 @@ public class Vampiro : Player
 {
     public string MordidaSanguinaria;
 
-    public void setMordidaSanguinaria(string mordidaSanguinaria)
+    public void setMordidaSanguinaria(int a)
     {
         this.MordidaSanguinaria = MordidaSanguinaria;
     }
 
-    public string MordidaSanguinária()
+    public string GetMordidaSanguinaria()
     {
         return this.MordidaSanguinaria;
     }
