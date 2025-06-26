@@ -2,18 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vampiro : Player
+public class Vampiro : Player{
+    public string mordidaSanguinaria;
 
-{
-    public string MordidaSanguinaria;
-
-    public void setMordidaSanguinaria(int a)
+    public void setMordidaSanguinaria(string mordidaSanguinaria)
     {
-        this.MordidaSanguinaria = MordidaSanguinaria;
+        this.mordidaSanguinaria = mordidaSanguinaria;
     }
 
     public string GetMordidaSanguinaria()
     {
-        return this.MordidaSanguinaria;
+        return this.mordidaSanguinaria;
     }
+
+    public void UsouMordidaSanguinaria(Vampiro)
+    
+    {
+        Debug.Log(this.GetNome() + " usou " + GetMordidaSanguinaria() + " em " + Inimigo.SetNome());
+    }
+
+    
 }

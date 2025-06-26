@@ -6,40 +6,31 @@ using UnityEngine;
 
 public class Teste : MonoBehaviour
 {
-    Vampiro Dexter = new Vampiro(); 
-    Inimigo inimigo = new Inimigo();
+    Player Dexter = new Vampiro(); 
+    Player inimigo = new Inimigo();
 
     void Start()
-    
     {
-        Dexter.GetNome();
-        Dexter.GetAtaque(20);
-        Dexter.GetVida(20);
-        Dexter.GetDefesa(20);
+        Dexter.SetNome("Dexter");
+        Dexter.SetAtaque(20);
+        Dexter.SetVida(20);
+        Dexter.SetDefesa(20);
         Dexter.GetMordidaSanguinaria();
-        
-        
-        inimigo.GetNome();
-        inimigo.GetAtaqueInimigo(13);
-        inimigo.GetEnergia(10);
-        inimigo.GetVelocidade(11);
-        
-        Dexter.UsouMordidaSanguinaria(inimigo);
-        Dexter.UsouMordidasanguinaria(inimigo);
-        
-        if (Inimigo.GetVida() <= 0)
+
+        inimigo.SetNome("ww");
+        inimigo.SetAtaque(15);
+        inimigo.SetVida(20);
+        inimigo.SetDefesa(20);
+
+        Dexter.UsouMordidaSanguinaria(inimigo);  
+
+        if (inimigo.GetVida() <= 0)
         {
-            Debug.Log("O " + inimigo.nome() + "Morreu");
+            Debug.Log("O " + inimigo.GetNome() + " morreu");
         }
         else
         {
-            Debug.Log("O " + inimigo.Nome() + " ainda tem " + inimigo.GetVida() + " de vida");
+            Debug.Log("O " + inimigo.GetNome() + " ainda tem " + inimigo.GetVida() + " de vida");
         }
-    
-}
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Inimigo : Player
 
-{
+{ 
     public string inimigo;
     
-  public int AtaqueInimigo;
+    public int AtaqueInimigo;
 
-   public int GetAtaqueInimigo()
+    public int GetAtaqueInimigo()
   {
      return AtaqueInimigo;
   }

@@ -8,11 +8,10 @@ public class Player : MonoBehaviour
     public int Vida;
     private int ataque;
     public int defesa;
-    
+
     public void SetNome(string nome)
     {
         this.Nome = nome;
-        
     }
 
     public string GetNome()
@@ -20,37 +19,35 @@ public class Player : MonoBehaviour
         return this.Nome;
     }
 
-    public int SetVida()
+    public void SetVida(int vida)
     {
-        return this.Vida;
-        
+        this.Vida = vida;
     }
 
-    public void GetVida(int vida)
+    public int GetVida()
     {
-        this.Vida = Vida;
+        return this.Vida;
     }
-    
+
     public void SetAtaque(int ataque)
     {
         this.ataque = ataque;
     }
-    
-    public int GetAtaque(int ataque)
+
+    public int GetAtaque()
     {
         return this.ataque;
     }
 
-    public void GetDefesa(int defesa)
+    public void SetDefesa(int defesa)
     {
         this.defesa = defesa;
     }
-    
-    public int SetDefesa()
+
+    public int GetDefesa()
     {
         return this.defesa;
     }
-    
 
     public string CompararAtaque(Player Inimigo)
     {
@@ -58,7 +55,7 @@ public class Player : MonoBehaviour
         {
             return Nome + " é mais forte que " + Inimigo.GetNome();
         }
-        else if (this.ataque < Inimigo.GetAtaque()) 
+        else if (this.ataque < Inimigo.GetAtaque())
         {
             return Inimigo.GetNome() + " é mais forte que " + Nome;
         }
@@ -67,17 +64,6 @@ public class Player : MonoBehaviour
             return Nome + " e " + Inimigo.GetNome() + " têm a mesma força";
         }
     }
-    
-         
-    
-    void Start()
-    {
-        
-    }
 
-   
-    void Update()
-    {
-        
-    }
 }
+         
