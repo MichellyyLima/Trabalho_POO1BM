@@ -390,6 +390,7 @@ GameObject:
   - component: {fileID: 463542815}
   - component: {fileID: 463542814}
   - component: {fileID: 463542813}
+  - component: {fileID: 463542818}
   m_Layer: 0
   m_Name: Base
   m_TagString: chao
@@ -419,8 +420,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -513,6 +514,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &463542818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463542812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98707c39cc834624bae2be81b4c6051d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1146844095
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +539,8 @@ GameObject:
   - component: {fileID: 1146844098}
   - component: {fileID: 1146844097}
   - component: {fileID: 1146844096}
+  - component: {fileID: 1146844102}
+  - component: {fileID: 1146844101}
   m_Layer: 0
   m_Name: Vampiro
   m_TagString: Untagged
@@ -651,6 +666,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1146844101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146844095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec72d9d024fc794faef9c4737f57dea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vida: 0
+  defesa: 0
+  MordidaSanguinaria: 
+--- !u!114 &1146844102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146844095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81926a26ffb88304f9887d0e72dccb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vida: 0
+  defesa: 0
 --- !u!1 &2027117907
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +707,7 @@ GameObject:
   - component: {fileID: 2027117910}
   - component: {fileID: 2027117909}
   - component: {fileID: 2027117908}
+  - component: {fileID: 2027117912}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: Untagged
@@ -759,6 +804,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2027117912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027117907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53629fea5754e2a46938d48ffdec89df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Vida: 0
+  defesa: 0
+  inimigo: 
+  Nome: 
+  AtaqueInimigo: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
