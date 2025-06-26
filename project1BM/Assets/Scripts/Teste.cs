@@ -15,14 +15,13 @@ public class Teste : MonoBehaviour
         Dexter.SetAtaque(20);
         Dexter.SetVida(20);
         Dexter.SetDefesa(20);
-        Dexter.GetMordidaSanguinaria();
 
         inimigo.SetNome("ww");
         inimigo.SetAtaque(15);
         inimigo.SetVida(20);
         inimigo.SetDefesa(20);
-
-        Dexter.UsouMordidaSanguinaria(inimigo);  
+        
+        
 
         if (inimigo.GetVida() <= 0)
         {

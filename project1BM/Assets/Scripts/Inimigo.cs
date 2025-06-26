@@ -7,6 +7,7 @@ public class Inimigo : Player
 
 { 
     public string inimigo;
+    public string Nome;
     
     public int AtaqueInimigo;
 
@@ -14,6 +15,15 @@ public class Inimigo : Player
   {
      return AtaqueInimigo;
   }
-   
+
+    public void SetNome(string nome)
+    {
+        this.Nome = nome;
+    }
+
+    public string GetNome()
+    {
+        return this.Nome;
+    }
 }
 
